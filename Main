@@ -1,7 +1,8 @@
 from random import randint as r
-from os import system as s
 
-chars = ('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM/*-\|&?,.1234567890')
+paroli = 0
+
+chars = ('qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM/*-\|&?,.1234567890')
 
 def create():
     n = int(input('Введите количество символов:'))
@@ -10,12 +11,18 @@ def create():
         password = f'{password}{chars[r(0, len(chars)-1)]}'
     print(password)
 
-programm = True
-while programm:
+def lib():
+    print(paroli)
+
+def start():
+    print("Добро пожаловать в Генератор паролей!")
     create()
-    k = int(input('Продолжить? (1/0): '))
-    if k == '1':
-        programm = True
-    elif k == '0':
-        programm = False
-    s('cls')
+    m = int(input("Хотите посмотреть сгенерированные пароли?(1/2)"))
+    if m == 1:
+        lib()
+    elif m == 2:
+        start()
+    return m
+
+
+start()
