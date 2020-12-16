@@ -1,6 +1,6 @@
 from random import randint as r
 
-paroli = 0
+paroli = str()
 
 chars = ('qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM/*-\|&?,.1234567890')
 
@@ -10,10 +10,13 @@ def create():
     for i in range(n):
         password = f'{password}{chars[r(0, len(chars)-1)]}'
     print(password)
+    paroli + str(paroli)
 
 def lib():
     print(paroli)
-
+    k = int(input("Вернуться в меню?(1)"))
+    if k == 1:
+        start()
 def start():
     print("Добро пожаловать в Генератор паролей!")
     create()
